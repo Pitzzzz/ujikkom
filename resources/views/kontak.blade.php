@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Hubungi Kami — Harapan Mulia')
+@section('title', 'Hubungi Kami — Interlochen Arts Academy')
 
 @section('content')
 <section class="page-hero">
@@ -102,7 +102,7 @@
 
     <div class="contact-map reveal">
         <iframe
-            title="Peta lokasi Harapan Mulia"
+            title="Peta lokasi Interlochen Arts Academy"
             src="https://maps.google.com/maps?q=Bogor&t=&z=13&ie=UTF8&iwloc=&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

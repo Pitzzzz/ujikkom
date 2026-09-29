@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Galeri — Harapan Mulia')
+@section('title', 'Galeri — Interlochen Arts Academy')
 
 @section('content')
 <section class="page-hero">
@@ -24,23 +24,7 @@
 
     <div class="masonry" id="gallery-masonry">
         @foreach ($gallery as $i => $item)
-            <button
-                type="button"
-                class="masonry__item reveal"
-                data-gallery-index="{{ $i }}"
-                data-category="{{ $item['cat'] }}"
-                data-src="{{ $item['src'] }}"
-                data-title="{{ $item['title'] }}"
-                data-desc="{{ $item['desc'] }}"
-                data-date="{{ $item['date'] }}"
-                aria-label="Perbesar {{ $item['title'] }}"
-            >
-                <img src="{{ $item['src'] }}" alt="{{ $item['title'] }}" loading="lazy">
-                <span class="masonry__overlay">
-                    <span class="label-nav">{{ $item['cat'] }}</span>
-                    <span class="masonry__title">{{ $item['title'] }}</span>
-                </span>
-            </button>
+            <x-gallery-card :item="$item" :index="$i" />
         @endforeach
     </div>
 </section>

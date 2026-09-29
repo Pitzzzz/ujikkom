@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Harapan Mulia — Ketika Pendidikan Menjadi Seni')
+@section('title', 'Interlochen Arts Academy — Ketika Pendidikan Menjadi Seni')
 
 @section('content')
 {{-- =========================================================
@@ -20,32 +20,32 @@
     {{-- Desktop 5-panel collage --}}
     <div class="collage" id="hero-collage" aria-hidden="true">
         <div class="collage__panel">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=600&fit=crop" alt="" loading="eager">
+            <img src="{{ asset('images/sekolah.jpg') }}" alt="" loading="eager">
         </div>
         <div class="collage__panel">
-            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&h=700&fit=crop" alt="" loading="eager">
+            <img src="{{ asset('images/sekolah2.jpg') }}" alt="" loading="eager">
         </div>
         <div class="collage__panel">
-            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&h=800&fit=crop" alt="" loading="eager">
+            <img src="{{ asset('images/sekolah3.jpg') }}" alt="" loading="eager">
         </div>
         <div class="collage__panel">
-            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=700&fit=crop" alt="" loading="eager">
+            <img src="{{ asset('images/sekolah4.jpg') }}" alt="" loading="eager">
         </div>
         <div class="collage__panel">
-            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=400&h=600&fit=crop" alt="" loading="eager">
+            <img src="{{ asset('images/sekolah5.jpg') }}" alt="" loading="eager">
         </div>
     </div>
 
     {{-- Mobile carousel collage --}}
     <div class="collage-mobile" aria-label="Galeri suasana sekolah">
         <div class="collage-mobile__panel">
-            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=500&h=700&fit=crop" alt="Kegiatan belajar di kelas" loading="lazy">
+            <img src="{{ asset('images/sekolah5.jpg') }}" alt="" loading="eager">
         </div>
         <div class="collage-mobile__panel">
-            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&h=700&fit=crop" alt="Wisuda dan prestasi siswa" loading="lazy">
+            <img src="{{ asset('images/sekolah5.jpg') }}" alt="" loading="eager">
         </div>
         <div class="collage-mobile__panel">
-            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&h=700&fit=crop" alt="Gedung sekolah" loading="lazy">
+            <img src="{{ asset('images/sekolah5.jpg') }}" alt="" loading="eager">
         </div>
     </div>
 </section>

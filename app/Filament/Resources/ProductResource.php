@@ -33,6 +33,7 @@ class ProductResource extends Resource
                     ->image()
                     ->directory('products')
                     ->disk('public')
+                    ->directory('products')
                     ->imageEditor()
                     ->required()
                     ->columnSpanFull(),

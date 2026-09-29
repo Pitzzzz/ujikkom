@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Harapan Mulia — sekolah yang membangun karakter, prestasi, dan cinta belajar.">
-    <title>@yield('title', 'Harapan Mulia')</title>
+    <meta name="description" content="Interlochen Arts Academy — sekolah yang membangun karakter, prestasi, dan cinta belajar.">
+    <title>@yield('title', 'Interlochen Arts Academy')</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
     <header class="site-header" id="site-header">
         <div class="site-header__inner">
             <a href="{{ route('home') }}" class="site-logo">
-                <span>Harapan Mulia</span>
+                <span>Interlochen Arts Academy</span>
                 <span class="site-logo__line" aria-hidden="true"></span>
             </a>
 
@@ -106,7 +106,7 @@
         <div class="container-site">
             <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
                 <div>
-                    <p class="site-logo mb-4">Harapan Mulia</p>
+                    <p class="site-logo mb-4">Interlochen Arts Academy</p>
                     <p class="text-sm text-[var(--text-muted)] leading-relaxed">
                         Sekolah yang membangun karakter, prestasi, dan cinta belajar dalam suasana belajar yang hangat dan bermakna.
                     </p>
@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="site-footer__bottom">
-                © 2026 Harapan Mulia. Hak cipta dilindungi.
+                © 2026 Interlochen Arts Academy. Hak cipta dilindungi.
             </div>
         </div>
     </footer>

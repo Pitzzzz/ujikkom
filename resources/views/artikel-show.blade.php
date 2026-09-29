@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $article['title'].' — Harapan Mulia')
+@section('title', $article['title'].' — Interlochen Arts Academy')
 
 @section('content')
 <article class="article-detail">

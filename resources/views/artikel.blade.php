@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Artikel — Harapan Mulia')
+@section('title', 'Artikel — Interlochen Arts Academy')
 
 @section('content')
 <section class="page-hero">
@@ -29,37 +29,11 @@
     </div>
 
     @php $featured = $articles[0]; @endphp
-    <a href="{{ route('artikel.show', $featured['slug']) }}" class="folio__feature reveal article-feature" data-article-item data-category="{{ $featured['cat'] }}" data-title="{{ strtolower($featured['title'].' '.$featured['excerpt']) }}">
-        <div class="folio__feature-media">
-            <img src="{{ $featured['img'] }}" alt="{{ $featured['title'] }}" loading="lazy">
-        </div>
-        <div class="folio__feature-copy">
-            <span class="label-nav text-[var(--accent-soft)]">{{ $featured['cat'] }} · {{ $featured['date'] }}</span>
-            <h2>{{ $featured['title'] }}</h2>
-            <p>{{ $featured['excerpt'] }}</p>
-            <span class="folio__link">Baca cerita →</span>
-        </div>
-    </a>
+    <x-article-card :article="$featured" :featured="true" />
 
     <div class="article-grid" id="article-grid">
         @foreach (array_slice($articles, 1) as $article)
-            <a
-                href="{{ route('artikel.show', $article['slug']) }}"
-                class="article-card reveal"
-                data-article-item
-                data-category="{{ $article['cat'] }}"
-                data-title="{{ strtolower($article['title'].' '.$article['excerpt']) }}"
-            >
-                <div class="article-card__media">
-                    <img src="{{ $article['img'] }}" alt="{{ $article['title'] }}" loading="lazy">
-                </div>
-                <div class="article-card__body">
-                    <p class="label-nav text-[var(--accent-soft)]">{{ $article['cat'] }}</p>
-                    <h3>{{ $article['title'] }}</h3>
-                    <p>{{ $article['excerpt'] }}</p>
-                    <span>{{ $article['date'] }} · {{ $article['read'] }}</span>
-                </div>
-            </a>
+            <x-article-card :article="$article" :featured="false" />
         @endforeach
     </div>
 </section>

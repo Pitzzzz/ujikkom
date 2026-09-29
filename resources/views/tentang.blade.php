@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami — Harapan Mulia')
+@section('title', 'Tentang Kami — Interlochen Arts Academy')
 
 @section('content')
 <section class="page-hero">
@@ -19,11 +19,11 @@
     <div class="about-profile__copy reveal">
         <p class="label-nav text-[var(--accent-soft)]">Profil & Sejarah</p>
         <h2 class="about-profile__title">Dari ruang kecil<br>menjadi komposisi</h2>
-        <p>Harapan Mulia berdiri pada 1998 dengan keyakinan sederhana: pendidikan yang baik bukan hanya menyampaikan materi, tetapi membentuk cara siswa memandang dunia.</p>
+        <p>Interlochen Arts Academy berdiri pada 1998 dengan keyakinan sederhana: pendidikan yang baik bukan hanya menyampaikan materi, tetapi membentuk cara siswa memandang dunia.</p>
         <p>Dari satu gedung sederhana, sekolah tumbuh menjadi komunitas belajar lintas jenjang — SD, SMP, dan SMA — dengan irama yang sama: kehangatan, ketelitian, dan keberanian untuk bertanya.</p>
     </div>
     <figure class="about-profile__figure reveal">
-        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1000&h=1200&fit=crop" alt="Gedung utama Harapan Mulia" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1000&h=1200&fit=crop" alt="Gedung utama Interlochen Arts Academy" loading="lazy">
         <figcaption>Gedung utama · Bogor</figcaption>
     </figure>
 </section>

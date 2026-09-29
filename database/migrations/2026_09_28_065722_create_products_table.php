@@ -10,12 +10,18 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('products', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('products', function (Blueprint $table) {
+        $table->id();
+        $table->string('image');
+        $table->string('category');
+        $table->string('title');
+        $table->decimal('price', 12, 2);
+        $table->text('short_description')->nullable();
+        $table->json('variants')->nullable(); // Disimpan sebagai JSON array (misal: S, M, L)
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.

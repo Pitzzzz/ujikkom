@@ -33,8 +33,8 @@ class ArticleResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->label('Gambar')
                     ->image()
-                    ->directory('articles')
                     ->disk('public')
+                    ->directory('articles')
                     ->imageEditor()
                     ->required()
                     ->columnSpanFull(),
@@ -124,7 +124,7 @@ class ArticleResource extends Resource
                         'Tips' => 'Tips',
                     ]),
             ])
-            ->actions([
+                        ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
