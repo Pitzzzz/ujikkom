@@ -24,7 +24,7 @@
                 </span>
                 <div>
                     <p class="label-nav">Alamat</p>
-                    <p>Jl. Pendidikan No. 12, Bogor</p>
+                    <p>4000 J. Maddy Pkwy, Interlochen, MI 49643, USA</p>
                 </div>
             </div>
             <div class="contact-info__item">
@@ -33,7 +33,7 @@
                 </span>
                 <div>
                     <p class="label-nav">Telepon</p>
-                    <p><a href="tel:+622518901234">(0251) 890-1234</a></p>
+                    <p><a href="tel:+12312767200">+1 231-276-7200</a></p>
                 </div>
             </div>
             <div class="contact-info__item">
@@ -42,7 +42,7 @@
                 </span>
                 <div>
                     <p class="label-nav">Email</p>
-                    <p><a href="mailto:info@harapanmulia.sch.id">info@harapanmulia.sch.id</a></p>
+                    <p><a href="mailto:academy@interlochen.org">academy@interlochen.org</a></p>
                 </div>
             </div>
             <div class="contact-info__item">
@@ -51,16 +51,16 @@
                 </span>
                 <div>
                     <p class="label-nav">Jam operasional</p>
-                    <p>Senin–Jumat, 07.00–16.00</p>
+                    <p>24 Jam</p>
                 </div>
             </div>
             <div class="contact-social">
                 <p class="label-nav mb-3">Media sosial</p>
                 <div class="flex flex-wrap gap-4 text-sm text-[var(--text-muted)]">
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">YouTube</a>
-                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    <a href="https://www.instagram.com/interlochenarts/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/InterlochenArtsCenter" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.youtube.com/user/InterlochenArts" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a href="https://wa.me/+12312767200" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                 </div>
             </div>
         </aside>
@@ -103,7 +103,7 @@
     <div class="contact-map reveal">
         <iframe
             title="Peta lokasi Interlochen Arts Academy"
-            src="https://maps.google.com/maps?q=Bogor&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2839.4287174594615!2d-85.76660079999999!3d44.629154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881e380279b498bf%3A0x1cb55e4aca5f1962!2sInterlochen%20Center%20for%20the%20Arts!5e0!3m2!1sen!2sid!4v1790817538965!5m2!1sen!2sid"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen

@@ -10,8 +10,8 @@
             <span aria-hidden="true">/</span>
             <span>Artikel</span>
         </nav>
-        <h1 class="page-hero__title">Artikel</h1>
-        <p class="page-hero__lead">Berita, pengumuman, prestasi, dan catatan kecil dari kehidupan sekolah.</p>
+        <h1 class="page-hero__title">Jurnal Seni</h1>
+        <p class="page-hero__lead">Kisah, inspirasi, dan liputan berita terkini dari komuniti kami.</p>
     </div>
 </section>
 

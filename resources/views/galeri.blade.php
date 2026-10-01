@@ -10,8 +10,8 @@
             <span aria-hidden="true">/</span>
             <span>Galeri</span>
         </nav>
-        <h1 class="page-hero__title">Galeri</h1>
-        <p class="page-hero__lead">Kumpulan bingkai dari kelas, panggung, lapangan, dan ruang yang diam-diam membentuk kami.</p>
+        <h1 class="page-hero__title">Bingkai Abadi</h1>
+        <p class="page-hero__lead">Rekam Jejak Karya, Dedikasi, dan Momen Bersejarah di Interlochen.</p>
     </div>
 </section>
 

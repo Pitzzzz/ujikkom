@@ -8,10 +8,10 @@
      ========================================================= --}}
 <section class="hero container-site" id="beranda">
     <h1 class="heading-xl reveal">
-        Ketika Pendidikan<br>Menjadi Seni
+        Akademi Seni Interlochen<br>Sekolah Asrama Seni Michigan
     </h1>
     <p class="hero__subtitle reveal">
-        Sekolah yang membangun karakter, prestasi, dan cinta belajar.
+        Interlochen baru-baru ini dinobatkan sebagai Sekolah Menengah Atas Terbaik #1 untuk Seni di Amerika, selain menerima nilai A+ untuk Akademik dan A+ untuk Persiapan Perguruan Tinggi.
     </p>
     <div class="hero__cta reveal">
         <a href="{{ route('kontak') }}" class="btn btn-primary">Daftar Sekarang</a>
@@ -20,19 +20,19 @@
     {{-- Desktop 5-panel collage --}}
     <div class="collage" id="hero-collage" aria-hidden="true">
         <div class="collage__panel">
-            <img src="{{ asset('images/sekolah.jpg') }}" alt="" loading="eager">
+            <img src="{{ asset('images/hero1.jpg') }}" alt="" loading="eager">
         </div>
         <div class="collage__panel">
-            <img src="{{ asset('images/sekolah2.jpg') }}" alt="" loading="eager">
+            <img src="{{ asset('images/hero2.jpg') }}" alt="" loading="eager">
         </div>
         <div class="collage__panel">
-            <img src="{{ asset('images/sekolah3.jpg') }}" alt="" loading="eager">
+            <img src="{{ asset('images/hero3.jfif') }}" alt="" loading="eager">
         </div>
         <div class="collage__panel">
-            <img src="{{ asset('images/sekolah4.jpg') }}" alt="" loading="eager">
+            <img src="{{ asset('images/hero4.jfif') }}" alt="" loading="eager">
         </div>
         <div class="collage__panel">
-            <img src="{{ asset('images/sekolah5.jpg') }}" alt="" loading="eager">
+            <img src="{{ asset('images/hero5.jfif') }}" alt="" loading="eager">
         </div>
     </div>
 
@@ -56,37 +56,33 @@
      ========================================================= --}}
 <section class="ledger" id="sekilas">
     <div class="ledger__intro reveal">
-        <p class="label-nav text-[var(--accent-soft)]">Sejak 1998</p>
+        <p class="label-nav text-[var(--accent-soft)]">Sejak 1962</p>
         <h2 class="ledger__title">Yang kami<br>ukir bersama</h2>
     </div>
 
     <ol class="ledger__list">
         <li class="ledger__row reveal">
-            <span class="ledger__num" data-count="1250">0</span>
+            <span class="ledger__num" data-count="579">0</span>
             <span class="ledger__meta">
                 <span class="ledger__label">Siswa aktif</span>
-                <span class="ledger__note">belajar di tiga jenjang</span>
             </span>
         </li>
         <li class="ledger__row reveal">
-            <span class="ledger__num" data-count="86">0</span>
+            <span class="ledger__num" data-count="201">0</span>
             <span class="ledger__meta">
                 <span class="ledger__label">Guru & staf</span>
-                <span class="ledger__note">pendamping setiap hari</span>
             </span>
         </li>
         <li class="ledger__row reveal">
-            <span class="ledger__num" data-count="142">0</span>
+            <span class="ledger__num" data-count="12000">+</span>
             <span class="ledger__meta">
                 <span class="ledger__label">Prestasi</span>
-                <span class="ledger__note">kota · provinsi · nasional</span>
             </span>
         </li>
         <li class="ledger__row reveal">
-            <span class="ledger__num" data-count="1998">0</span>
+            <span class="ledger__num" data-count="1962">0</span>
             <span class="ledger__meta">
                 <span class="ledger__label">Tahun berdiri</span>
-                <span class="ledger__note">akar yang terus tumbuh</span>
             </span>
         </li>
     </ol>
@@ -105,38 +101,41 @@
     </div>
 
     <div class="manifesto__body">
-        <p class="manifesto__eyebrow label-nav reveal">Mengapa di sini</p>
-        <h2 class="manifesto__heading reveal">Pendidikan<br>sebagai<br><em>komposisi</em></h2>
+        <!-- Kolom Kiri: Teks & Poin Manifesto -->
+        <div class="manifesto__content">
+            <p class="manifesto__eyebrow label-nav reveal">Mengapa di sini</p>
+            <h2 class="manifesto__heading reveal">Pendidikan<br>sebagai<br><em>komposisi</em></h2>
 
-        <div class="manifesto__items">
-            <article class="manifesto__item reveal">
-                <span class="manifesto__index">I</span>
-                <div>
-                    <h3>Kurikulum yang bernapas</h3>
-                    <p>Akademik, seni, dan nilai kemanusiaan disusun seperti partitur — tiap siswa menemukan nadanya sendiri.</p>
-                </div>
-            </article>
-            <article class="manifesto__item reveal">
-                <span class="manifesto__index">II</span>
-                <div>
-                    <h3>Ruang yang mengundang</h3>
-                    <p>Lab, perpustakaan, dan studio terbuka. Bukan dekorasi — tempat eksplorasi benar-benar terjadi.</p>
-                </div>
-            </article>
-            <article class="manifesto__item reveal">
-                <span class="manifesto__index">III</span>
-                <div>
-                    <h3>Bakat yang dipanggil keluar</h3>
-                    <p>Olahraga, riset, panggung. Mentor hadir bukan untuk mengarahkan, tapi menyalakan.</p>
-                </div>
-            </article>
+            <div class="manifesto__items">
+                <article class="manifesto__item reveal">
+                    <span class="manifesto__index">I</span>
+                    <div>
+                        <h3>Dual Kurikulum</h3>
+                        <p>Menggunakan kurikulum Artistic Major, setiap siswa dapat mengembangkan bakat sesuai minatnya. College Prep, di samping seni, siswa wajib menyelesaikan standar akademik berasrama yang diakreditasi oleh Independent Schools Association of the Central States (ISACS) dan Cognia.</p>
+                    </div>
+                </article>
+                <article class="manifesto__item reveal">
+                    <span class="manifesto__index">II</span>
+                    <div>
+                        <h3>Kresge Auditorium</h3>
+                        <p>Amfiteater ikonik berkapasitas 4.000 penonton yang berlokasi di tepi danau kampus Interlochen. Memadukan desain open-air beratap dengan akustik alami yang memukau, Kresge Auditorium menjadi panggung utama untuk konser simfoni, festival musim panas, dan berbagai pertunjukan seni akbar.</p>
+                    </div>
+                </article>
+                <article class="manifesto__item reveal">
+                    <span class="manifesto__index">III</span>
+                    <div>
+                        <h3>National Medal of Arts (2006)</h3>
+                        <p>Prestasi terbesar Interlochen ditandai dengan penganugerahan National Medal of Arts pada tahun 2006, penghargaan seni tertinggi dari Pemerintah Federal Amerika Serikat yang diserahkan langsung di Gedung Putih atas kontribusi luar biasanya dalam mencetak generasi seniman dunia.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan: Tempat Gambar -->
+        <div class="manifesto__media reveal">
+           <img src="{{ asset('images/Trey-Devey.webp') }}" alt="Interlochen Arts Academy" loading="eager" class="manifesto__image">
         </div>
     </div>
-
-    <figure class="manifesto__figure reveal">
-        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=1100&fit=crop" alt="Siswa dalam suasana belajar" loading="lazy">
-        <figcaption>Kelas bukan tempat duduk. Kelas adalah panggung kecil.</figcaption>
-    </figure>
 </section>
 
 {{-- =========================================================
@@ -145,8 +144,8 @@
 <section class="strip" id="galeri">
     <div class="strip__header">
         <div class="reveal">
-            <p class="label-nav text-[var(--accent-soft)] mb-3">Galeri</p>
-            <h2 class="strip__title">Bingkai<br>yang hidup</h2>
+            <p class="label-nav text-[var(--accent-soft)] mb-3">Menangkap Harmoni, Mengabadikan Perjalanan Seni</p>
+            <h2 class="strip__title">Bingkai<br>Abadi</h2>
         </div>
         <a href="{{ route('galeri') }}" class="strip__hint reveal">lihat semua →</a>
     </div>
@@ -180,8 +179,8 @@
 <section class="folio" id="artikel">
     <div class="folio__head reveal flex flex-wrap items-end justify-between gap-4">
         <div>
-            <p class="label-nav text-[var(--accent-soft)]">Artikel</p>
-            <h2 class="folio__title">Bacaan<br>minggu ini</h2>
+            <p class="label-nav text-[var(--accent-soft)]">Gema pemikiran & kisah inspirasi</p>
+            <h2 class="folio__title">Gema<br>Karya</h2>
         </div>
         <a href="{{ route('artikel') }}" class="folio__link">Semua artikel →</a>
     </div>
@@ -220,10 +219,10 @@
 <section class="lookbook" id="produk">
     <div class="lookbook__intro reveal flex flex-wrap items-end justify-between gap-4">
         <div>
-            <p class="label-nav text-[var(--accent-soft)]">Produk</p>
-            <h2 class="lookbook__title">Dikenakan.<br>Dibawa.<br>Dibaca.</h2>
+            <p class="label-nav text-[var(--accent-soft)]">Cenderamata & perlengkapan kreasi</p>
+            <h2 class="lookbook__title">Jejak<br>Karya</h2>
         </div>
-        <a href="{{ route('produk') }}" class="folio__link">Semua produk →</a>
+        <a href="{{ route('produk') }}" class="folio__link">Lihat Semua →</a>
     </div>
 
     @foreach ($products as $i => $product)
@@ -254,20 +253,4 @@
     @endforeach
 </section>
 
-{{-- =========================================================
-     CTA — tipografi penuh layar, bukan band tengah
-     ========================================================= --}}
-<section class="invite">
-    <p class="invite__whisper reveal label-nav">Pendaftaran dibuka</p>
-    <h2 class="invite__giant reveal" aria-hidden="true">
-        <span>Bergabung</span>
-        <span>Bersama</span>
-        <span>Kami</span>
-    </h2>
-    <h2 class="sr-only">Bergabung Bersama Kami</h2>
-    <p class="invite__line reveal">
-        Temukan ruang belajar yang membentuk karakter — lalu merayakan setiap pencapaian.
-    </p>
-    <a href="{{ route('kontak') }}" class="invite__cta reveal">Daftar Sekarang <span aria-hidden="true">→</span></a>
-</section>
 @endsection

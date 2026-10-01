@@ -16,11 +16,9 @@
     <aside class="side-rail side-rail--left" aria-hidden="true">
         <span class="side-rail__line"></span>
         <span class="side-rail__text">
-            SD
+            United States
             <span class="side-rail__diamond">◆</span>
-            SMP
-            <span class="side-rail__diamond">◆</span>
-            SMA
+            Michigan
         </span>
         <span class="side-rail__line"></span>
     </aside>
@@ -28,11 +26,11 @@
     <aside class="side-rail side-rail--right" aria-hidden="true">
         <span class="side-rail__line"></span>
         <span class="side-rail__text">
-            Bogor
+            Interlochen
             <span class="side-rail__diamond">◆</span>
-            Jl. Pendidikan
+            Arts
             <span class="side-rail__diamond">◆</span>
-            No. 12
+            Academy
         </span>
         <span class="side-rail__line"></span>
     </aside>
@@ -55,18 +53,18 @@
 
             <div class="site-header__actions">
                 <span class="site-header__line" aria-hidden="true"></span>
-                <a href="{{ route('kontak') }}" class="icon-btn" aria-label="Lokasi" title="Lokasi">
+                <a href="https://maps.app.goo.gl/HWkotfACwM5eNyTG8" class="icon-btn" aria-label="Lokasi" title="Lokasi">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                         <path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/>
                         <circle cx="12" cy="10" r="2.5"/>
                     </svg>
                 </a>
-                <a href="tel:+622518901234" class="icon-btn" aria-label="Telepon" title="Telepon">
+                <a href="tel:+12312767200" class="icon-btn" aria-label="Telepon" title="Telepon">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                         <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2.1Z"/>
                     </svg>
                 </a>
-                <a href="https://wa.me/6281234567890" class="icon-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+12312767200" class="icon-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                         <path d="M20.5 11.5A8.5 8.5 0 0 1 7.6 18.7L4 20l1.4-3.5A8.5 8.5 0 1 1 20.5 11.5Z"/>
                         <path d="M9.2 9.8c.3-.5.5-.5.8-.5h.6c.2 0 .4 0 .5.4l.8 2c.1.2 0 .4-.1.5l-.4.5c-.1.1-.1.3 0 .4.4.7 1.1 1.4 1.9 1.9.1.1.3.1.4 0l.5-.4c.2-.1.3-.2.5-.1l2 .8c.3.1.4.3.4.5v.6c0 .3 0 .5-.5.8-.4.3-1 .4-1.6.3A8 8 0 0 1 8.9 11c-.1-.6 0-1.2.3-1.6Z"/>
@@ -124,10 +122,10 @@
                 <div>
                     <p class="footer-title">Kontak</p>
                     <ul class="flex flex-col gap-3 text-sm text-[var(--text-muted)]">
-                        <li>Jl. Pendidikan No. 12, Bogor</li>
-                        <li><a href="tel:+622518901234">(0251) 890-1234</a></li>
-                        <li><a href="mailto:info@harapanmulia.sch.id">info@harapanmulia.sch.id</a></li>
-                        <li>Senin–Jumat, 07.00–16.00</li>
+                        <li>4000 J. Maddy Pkwy, Interlochen, MI 49643, USA</li>
+                        <li><a href="tel:+123127672004">+1 231-276-72004</a></li>
+                        <li><a href="mailto:academy@interlochen.org">academy@interlochen.org</a></li>
+                        <li>24/7</li>
                     </ul>
                 </div>
                 <div>

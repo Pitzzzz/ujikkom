@@ -10,8 +10,8 @@
             <span aria-hidden="true">/</span>
             <span>Produk</span>
         </nav>
-        <h1 class="page-hero__title">Produk</h1>
-        <p class="page-hero__lead">Seragam, buku, merchandise, dan program yang menemani perjalanan belajar.</p>
+        <h1 class="page-hero__title">Jejak Karya</h1>
+        <p class="page-hero__lead">Bawa pulang sepotong inspirasi dan kebanggaan dari komunitas Interlochen.</p>
     </div>
 </section>
 
