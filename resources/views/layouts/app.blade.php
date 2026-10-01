@@ -122,10 +122,10 @@
                 <div>
                     <p class="footer-title">Kontak</p>
                     <ul class="flex flex-col gap-3 text-sm text-[var(--text-muted)]">
-                        <li>4000 J. Maddy Pkwy, Interlochen, MI 49643, USA</li>
-                        <li><a href="tel:+123127672004">+1 231-276-72004</a></li>
-                        <li><a href="mailto:academy@interlochen.org">academy@interlochen.org</a></li>
-                        <li>24/7</li>
+                        <li>4000 4000 J. Maddy Pkwy, Interlochen, MI 49643, USA</li>
+                        <li><a href="tel:+622518901234">(0251) 890-1234</a></li>
+                        <li><a href="mailto:info@harapanmulia.sch.id">info@harapanmulia.sch.id</a></li>
+                        <li>Senin–Jumat, 07.00–16.00</li>
                     </ul>
                 </div>
                 <div>

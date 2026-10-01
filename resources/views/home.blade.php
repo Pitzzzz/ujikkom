@@ -130,11 +130,6 @@
                 </article>
             </div>
         </div>
-
-        <!-- Kolom Kanan: Tempat Gambar -->
-        <div class="manifesto__media reveal">
-           <img src="{{ asset('images/Trey-Devey.webp') }}" alt="Interlochen Arts Academy" loading="eager" class="manifesto__image">
-        </div>
     </div>
 </section>
 

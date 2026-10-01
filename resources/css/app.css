@@ -705,7 +705,7 @@ a {
     max-width: 1400px;
     margin-inline: auto;
 }
-    
+
 @media (min-width: 1024px) {
     .manifesto {
         grid-template-columns: 48px 1.1fr 0.9fr;
