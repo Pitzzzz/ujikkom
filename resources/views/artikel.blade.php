@@ -28,6 +28,7 @@
         </div>
     </div>
 
+    @if (!empty($articles))
     @php $featured = $articles[0]; @endphp
     <x-article-card :article="$featured" :featured="true" />
 
@@ -36,5 +37,8 @@
             <x-article-card :article="$article" :featured="false" />
         @endforeach
     </div>
+    @else
+        <p>Belum ada artikel.</p>
+    @endif
 </section>
 @endsection

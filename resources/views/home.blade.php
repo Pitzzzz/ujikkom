@@ -180,6 +180,7 @@
         <a href="{{ route('artikel') }}" class="folio__link">Semua artikel →</a>
     </div>
 
+    @if (!empty($articles))
     <a href="{{ route('artikel.show', $articles[0]['slug']) }}" class="folio__feature reveal" aria-label="{{ $articles[0]['title'] }}">
         <div class="folio__feature-media">
             <img src="{{ $articles[0]['img'] }}" alt="{{ $articles[0]['title'] }}" loading="lazy">
@@ -206,6 +207,9 @@
             </li>
         @endforeach
     </ul>
+    @else
+        <p class="folio__link">Belum ada artikel.</p>
+    @endif
 </section>
 
 {{-- =========================================================

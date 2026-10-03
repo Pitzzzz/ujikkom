@@ -7,6 +7,20 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Local setup
+
+1. Install PHP dependencies with `composer install`.
+2. Copy `.env.example` to `.env`, configure the database, then run `php artisan key:generate`.
+3. For SQLite, create the database file with `php -r "file_exists('database/database.sqlite') || touch('database/database.sqlite');"`.
+4. Run `php artisan migrate --seed` to create the schema, admin user, and starter content.
+5. Run `php artisan storage:link` so uploaded and seeded images are public.
+6. Install and build frontend assets with `npm ci` and `npm run build`.
+7. Start the app with `php artisan serve`.
+
+The seeded admin account is `admin@gmail.com` with password `admin123`. Change the password before deploying outside a local environment. Seeders do not overwrite existing CMS content or an existing admin password.
+
+Run automated tests with `php artisan test`.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

@@ -10,11 +10,11 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        User::updateOrCreate(
-            ['email' => 'admin@gmail.com'], // Cek berdasarkan email agar tidak duplicate
+        User::firstOrCreate(
+            ['email' => 'admin@gmail.com'],
             [
                 'name' => 'Administrator',
-                'password' => Hash::make('admin123'), // Ganti dengan password yang kamu mau
+                'password' => Hash::make('admin123'),
             ]
         );
     }

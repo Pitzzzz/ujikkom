@@ -516,9 +516,12 @@ a {
     flex: 1;
     overflow: hidden;
     height: 100%;
+    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.3s ease;
+}
+
+.js .collage:not(.is-visible) .collage__panel {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease, filter 0.3s ease;
 }
 
 .collage.is-visible .collage__panel {
@@ -1476,9 +1479,12 @@ body.modal-open {
    Scroll reveal — design.md §6
    ========================================================= */
 .reveal {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.js .reveal:not(.is-visible) {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .reveal.is-visible {

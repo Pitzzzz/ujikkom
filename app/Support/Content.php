@@ -5,6 +5,7 @@ namespace App\Support;
 use App\Models\Article;
 use App\Models\Gallery;
 use App\Models\Product;
+use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Storage;
 
@@ -16,7 +17,7 @@ class Content
             ->latest('date')
             ->get()
             ->map(fn (Gallery $gallery): array => [
-                'src' => Storage::disk('public')->url($gallery->image),
+                'src' => self::imageUrl($gallery->image),
                 'title' => $gallery->title,
                 'desc' => $gallery->short_description ?? '',
                 'date' => Carbon::parse($gallery->date)->format('d M Y'),
@@ -44,11 +45,12 @@ class Content
     public static function products(): array
     {
         return Product::query()
-            ->latest('id')
+            ->orderBy('sort_order')
+            ->orderByDesc('id')
             ->get()
             ->values()
             ->map(fn (Product $product, int $index): array => [
-                'img' => Storage::disk('public')->url($product->image),
+                'img' => self::imageUrl($product->image),
                 'cat' => $product->category,
                 'title' => $product->title,
                 'desc' => $product->short_description ?? '',
@@ -62,6 +64,7 @@ class Content
 
     private static function mapArticle(Article $article): array
     {
+        $date = $article->getRawOriginal('date');
         $content = str_replace(
             ['</p>', '<br>', '<br/>', '<br />'],
             ["\n", "\n", "\n", "\n"],
@@ -70,15 +73,23 @@ class Content
 
         return [
             'slug' => $article->slug,
-            'img' => Storage::disk('public')->url($article->image),
+            'img' => self::imageUrl($article->image),
             'cat' => $article->category,
             'title' => $article->title,
             'excerpt' => $article->excerpt,
-            'date' => $article->date?->format('d M Y') ?? '',
+            'date' => $date ? Carbon::parse($date)->format('d M Y') : '',
             'author' => $article->author,
             'read' => $article->read_time,
             'body' => preg_split('/\R+/', trim(strip_tags($content)), -1, PREG_SPLIT_NO_EMPTY) ?: [],
             'quote' => $article->quote,
         ];
+    }
+
+    private static function imageUrl(string $path): string
+    {
+        /** @var FilesystemAdapter $disk */
+        $disk = Storage::disk('public');
+
+        return $disk->url($path);
     }
 }

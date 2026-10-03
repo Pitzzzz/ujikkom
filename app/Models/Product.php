@@ -20,7 +20,7 @@ class Product extends Model
     {
         return [
             'variants' => 'array',
-            'price' => 'integer',
+            'price' => 'decimal:2',
             'sort_order' => 'integer',
         ];
     }

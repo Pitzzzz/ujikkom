@@ -3,6 +3,8 @@
  * Libraries: Tailwind only. No Framer/GSAP/Radix.
  */
 
+document.documentElement.classList.add('js');
+
 function prefersReducedMotion() {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
@@ -59,7 +61,7 @@ function initReveal() {
     const nodes = document.querySelectorAll('.reveal');
     if (!nodes.length) return;
 
-    if (prefersReducedMotion()) {
+    if (prefersReducedMotion() || !('IntersectionObserver' in window)) {
         nodes.forEach((el) => el.classList.add('is-visible'));
         return;
     }
@@ -84,7 +86,7 @@ function initCollage() {
     const collage = document.getElementById('hero-collage');
     if (!collage) return;
 
-    if (prefersReducedMotion()) {
+    if (prefersReducedMotion() || !('IntersectionObserver' in window)) {
         collage.classList.add('is-visible');
         return;
     }
@@ -129,6 +131,13 @@ function animateCount(el, target, duration = 1600) {
 function initCounters() {
     const counters = document.querySelectorAll('[data-count]');
     if (!counters.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+        counters.forEach((el) => {
+            el.textContent = el.getAttribute('data-count') || '0';
+        });
+        return;
+    }
 
     const io = new IntersectionObserver(
         (entries) => {
