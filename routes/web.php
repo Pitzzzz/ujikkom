@@ -1,7 +1,13 @@
 <?php
 
+use App\Http\Controllers\SuperAdmin\AdminController;
+use App\Http\Controllers\SuperAdmin\AuthController;
+use App\Http\Controllers\SuperAdmin\DashboardController;
+use App\Http\Controllers\LocaleController;
 use App\Support\Content;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/language/{locale}', LocaleController::class)->name('locale.switch');
 
 Route::get('/', function () {
     return view('home', [
@@ -47,3 +53,14 @@ Route::get('/produk', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 })->name('kontak');
+
+Route::prefix('superadmin')->name('superadmin.')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
+
+    Route::middleware(['auth', 'superadmin'])->group(function () {
+        Route::get('/', DashboardController::class)->name('dashboard');
+        Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+        Route::resource('admins', AdminController::class)->except(['show']);
+    });
+});

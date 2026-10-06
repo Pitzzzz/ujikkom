@@ -5,10 +5,10 @@
             <img src="{{ $article['img'] }}" alt="{{ $article['title'] }}" loading="lazy">
         </div>
         <div class="folio__feature-copy">
-            <span class="label-nav text-[var(--accent-soft)]">{{ $article['cat'] }} · {{ $article['date'] }}</span>
+            <span class="label-nav text-[var(--accent-soft)]">{{ t_category($article['cat']) }} · {{ $article['date'] }}</span>
             <h2>{{ $article['title'] }}</h2>
             <p>{{ $article['excerpt'] }}</p>
-            <span class="folio__link">Baca cerita →</span>
+            <span class="folio__link">{{ __('common.read_story') }}</span>
         </div>
     </a>
 @else
@@ -23,7 +23,7 @@
             <img src="{{ $article['img'] }}" alt="{{ $article['title'] }}" loading="lazy">
         </div>
         <div class="article-card__body">
-            <p class="label-nav text-[var(--accent-soft)]">{{ $article['cat'] }}</p>
+            <p class="label-nav text-[var(--accent-soft)]">{{ t_category($article['cat']) }}</p>
             <h3>{{ $article['title'] }}</h3>
             <p>{{ $article['excerpt'] }}</p>
             <span>{{ $article['date'] }} · {{ $article['read'] }}</span>

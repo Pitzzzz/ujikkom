@@ -5,6 +5,15 @@
 
 document.documentElement.classList.add('js');
 
+const messages = window.__i18n || {};
+
+function translate(key, replacements = {}) {
+    return Object.entries(replacements).reduce(
+        (text, [name, value]) => text.replace(`:${name}`, value),
+        messages[key] || key,
+    );
+}
+
 function prefersReducedMotion() {
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
@@ -301,7 +310,7 @@ function initProducts() {
             }
 
             if (wa) {
-                const text = encodeURIComponent(`Halo, saya tertarik dengan ${btn.dataset.title}`);
+                const text = encodeURIComponent(translate('wa_interest', { title: btn.dataset.title || '' }));
                 wa.href = `https://wa.me/6281234567890?text=${text}`;
             }
             openModal(modal, btn);
@@ -334,7 +343,7 @@ function initFilters() {
 
                 if (group === 'gallery') {
                     document.querySelectorAll('.masonry__item').forEach((item) => {
-                        const show = value === 'Semua' || item.dataset.category === value;
+                        const show = value === 'all' || item.dataset.category === value;
                         item.classList.toggle('is-hidden', !show);
                     });
                 }
@@ -353,11 +362,11 @@ function initFilters() {
 
 function applyArticleFilters() {
     const active = document.querySelector('[data-filter-group="articles"] .filter-chip.is-active');
-    const category = active?.dataset.filter || 'Semua';
+    const category = active?.dataset.filter || 'all';
     const query = (document.getElementById('article-search')?.value || '').trim().toLowerCase();
 
     document.querySelectorAll('[data-article-item]').forEach((item) => {
-        const matchCat = category === 'Semua' || item.dataset.category === category;
+        const matchCat = category === 'all' || item.dataset.category === category;
         const matchQuery = !query || (item.dataset.title || '').includes(query);
         item.classList.toggle('is-hidden', !(matchCat && matchQuery));
     });
@@ -371,7 +380,7 @@ function initArticleSearch() {
 
 function applyProductFilters() {
     const active = document.querySelector('[data-filter-group="products"] .filter-chip.is-active');
-    const category = active?.dataset.filter || 'Semua';
+    const category = active?.dataset.filter || 'all';
     const sort = document.getElementById('product-sort')?.value || 'newest';
     const grid = document.getElementById('product-grid');
     if (!grid) return;
@@ -379,7 +388,7 @@ function applyProductFilters() {
     const items = Array.from(grid.querySelectorAll('[data-product-item]'));
 
     items.forEach((item) => {
-        const show = category === 'Semua' || item.dataset.category === category;
+        const show = category === 'all' || item.dataset.category === category;
         item.classList.toggle('is-hidden', !show);
     });
 
@@ -425,11 +434,11 @@ function initContactForm() {
         let valid = true;
 
         const fields = [
-            { id: 'name', message: 'Nama wajib diisi.' },
-            { id: 'email', message: 'Email tidak valid.', test: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
-            { id: 'phone', message: 'No. telepon wajib diisi.' },
-            { id: 'subject', message: 'Pilih subjek.' },
-            { id: 'message', message: 'Pesan wajib diisi.' },
+            { id: 'name', message: translate('name_required') },
+            { id: 'email', message: translate('email_invalid'), test: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+            { id: 'phone', message: translate('phone_required') },
+            { id: 'subject', message: translate('subject_required') },
+            { id: 'message', message: translate('message_required') },
         ];
 
         fields.forEach(({ id, message, test }) => {
@@ -444,7 +453,7 @@ function initContactForm() {
         if (!valid) return;
 
         form.reset();
-        showToast('Pesan terkirim. Terima kasih.');
+        showToast(translate('message_sent'));
     });
 }
 
@@ -455,9 +464,9 @@ function initCopyLink() {
         const url = btn.dataset.url || window.location.href;
         try {
             await navigator.clipboard.writeText(url);
-            showToast('Tautan disalin');
+            showToast(translate('link_copied'));
         } catch {
-            showToast('Gagal menyalin tautan');
+            showToast(translate('link_copy_failed'));
         }
     });
 }

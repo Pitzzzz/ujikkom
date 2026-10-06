@@ -1,29 +1,29 @@
 @extends('layouts.app')
 
-@section('title', 'Artikel — Interlochen Arts Academy')
+@section('title', __('pages.articles_title'))
 
 @section('content')
 <section class="page-hero">
     <div class="page-hero__inner reveal">
         <nav class="breadcrumb label-nav" aria-label="Breadcrumb">
-            <a href="{{ route('home') }}">Beranda</a>
+            <a href="{{ route('home') }}">{{ __('nav.home') }}</a>
             <span aria-hidden="true">/</span>
-            <span>Artikel</span>
+            <span>{{ __('nav.articles') }}</span>
         </nav>
-        <h1 class="page-hero__title">Jurnal Seni</h1>
-        <p class="page-hero__lead">Kisah, inspirasi, dan liputan berita terkini dari komuniti kami.</p>
+        <h1 class="page-hero__title">{{ __('pages.articles_heading') }}</h1>
+        <p class="page-hero__lead">{{ __('pages.articles_lead') }}</p>
     </div>
 </section>
 
 <section class="articles-page">
     <div class="articles-toolbar reveal">
         <label class="articles-search">
-            <span class="sr-only">Cari artikel</span>
-            <input type="search" id="article-search" placeholder="Cari judul atau topik…" autocomplete="off">
+            <span class="sr-only">{{ __('pages.search_articles') }}</span>
+            <input type="search" id="article-search" placeholder="{{ __('pages.search_placeholder') }}" autocomplete="off">
         </label>
-        <div class="filter-bar" role="tablist" aria-label="Filter kategori artikel" data-filter-group="articles">
-            @foreach (['Semua', 'Berita', 'Pengumuman', 'Prestasi', 'Tips'] as $i => $cat)
-                <button type="button" class="filter-chip {{ $i === 0 ? 'is-active' : '' }}" data-filter="{{ $cat }}" role="tab" aria-selected="{{ $i === 0 ? 'true' : 'false' }}">{{ $cat }}</button>
+        <div class="filter-bar" role="tablist" aria-label="{{ __('pages.articles_filter') }}" data-filter-group="articles">
+            @foreach (['all', 'Berita', 'Pengumuman', 'Prestasi', 'Tips'] as $i => $cat)
+                <button type="button" class="filter-chip {{ $i === 0 ? 'is-active' : '' }}" data-filter="{{ $cat }}" role="tab" aria-selected="{{ $i === 0 ? 'true' : 'false' }}">{{ __('categories.'.$cat) }}</button>
             @endforeach
         </div>
     </div>
@@ -38,7 +38,7 @@
         @endforeach
     </div>
     @else
-        <p>Belum ada artikel.</p>
+        <p>{{ __('common.no_articles') }}</p>
     @endif
 </section>
 @endsection

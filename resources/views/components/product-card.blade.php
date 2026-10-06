@@ -11,7 +11,7 @@
         <span class="product-tile__no" aria-hidden="true">{{ $product['no'] }}</span>
     </div>
     <div class="product-tile__body">
-        <p class="label-nav text-[var(--accent-soft)]">{{ $product['cat'] }}</p>
+        <p class="label-nav text-[var(--accent-soft)]">{{ t_category($product['cat']) }}</p>
         <h2>{{ $product['title'] }}</h2>
         <p class="price">{{ $product['price'] }}</p>
         <button
@@ -25,7 +25,7 @@
             data-price="{{ $product['price'] }}"
             data-variants="{{ implode(',', $product['variants']) }}"
         >
-            Lihat Detail
+            {{ __('common.view_detail') }}
         </button>
     </div>
 </article>

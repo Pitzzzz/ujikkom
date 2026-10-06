@@ -8,11 +8,11 @@
     data-title="{{ $item['title'] }}"
     data-desc="{{ $item['desc'] }}"
     data-date="{{ $item['date'] }}"
-    aria-label="Perbesar {{ $item['title'] }}"
+    aria-label="{{ __('common.enlarge', ['title' => $item['title']]) }}"
 >
     <img src="{{ $item['src'] }}" alt="{{ $item['title'] }}" loading="lazy">
     <span class="masonry__overlay">
-        <span class="label-nav">{{ $item['cat'] }}</span>
+        <span class="label-nav">{{ t_category($item['cat']) }}</span>
         <span class="masonry__title">{{ $item['title'] }}</span>
     </span>
 </button>

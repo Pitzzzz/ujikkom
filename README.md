@@ -17,7 +17,11 @@
 6. Install and build frontend assets with `npm ci` and `npm run build`.
 7. Start the app with `php artisan serve`.
 
-The seeded admin account is `admin@gmail.com` with password `admin123`. Change the password before deploying outside a local environment. Seeders do not overwrite existing CMS content or an existing admin password.
+Seeded accounts (password `admin123` for both):
+- Super Admin: `admin@gmail.com` — panel at `/superadmin` (manage regular admins)
+- Regular Admin: `editor@gmail.com` — Filament CMS at `/admin`
+
+Change passwords before deploying outside a local environment. Seeders do not overwrite existing CMS content or an existing admin password.
 
 Run automated tests with `php artisan test`.
 

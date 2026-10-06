@@ -1,33 +1,33 @@
 @extends('layouts.app')
 
-@section('title', 'Produk — Interlochen Arts Academy')
+@section('title', __('pages.products_title'))
 
 @section('content')
 <section class="page-hero">
     <div class="page-hero__inner reveal">
         <nav class="breadcrumb label-nav" aria-label="Breadcrumb">
-            <a href="{{ route('home') }}">Beranda</a>
+            <a href="{{ route('home') }}">{{ __('nav.home') }}</a>
             <span aria-hidden="true">/</span>
-            <span>Produk</span>
+            <span>{{ __('nav.products') }}</span>
         </nav>
-        <h1 class="page-hero__title">Jejak Karya</h1>
-        <p class="page-hero__lead">Bawa pulang sepotong inspirasi dan kebanggaan dari komunitas Interlochen.</p>
+        <h1 class="page-hero__title">{{ __('pages.products_heading') }}</h1>
+        <p class="page-hero__lead">{{ __('pages.products_lead') }}</p>
     </div>
 </section>
 
 <section class="products-page">
     <div class="products-toolbar reveal">
-        <div class="filter-bar" role="tablist" aria-label="Filter kategori produk" data-filter-group="products">
-            @foreach (['Semua', 'Merchandise', 'Seragam', 'Buku', 'Program'] as $i => $cat)
-                <button type="button" class="filter-chip {{ $i === 0 ? 'is-active' : '' }}" data-filter="{{ $cat }}" role="tab" aria-selected="{{ $i === 0 ? 'true' : 'false' }}">{{ $cat }}</button>
+        <div class="filter-bar" role="tablist" aria-label="{{ __('pages.products_filter') }}" data-filter-group="products">
+            @foreach (['all', 'Merchandise', 'Seragam', 'Buku', 'Program'] as $i => $cat)
+                <button type="button" class="filter-chip {{ $i === 0 ? 'is-active' : '' }}" data-filter="{{ $cat }}" role="tab" aria-selected="{{ $i === 0 ? 'true' : 'false' }}">{{ __('categories.'.$cat) }}</button>
             @endforeach
         </div>
         <label class="products-sort">
-            <span class="sr-only">Urutkan</span>
+            <span class="sr-only">{{ __('pages.sort') }}</span>
             <select id="product-sort">
-                <option value="newest">Terbaru</option>
-                <option value="price-asc">Harga terendah</option>
-                <option value="price-desc">Harga tertinggi</option>
+                <option value="newest">{{ __('pages.newest') }}</option>
+                <option value="price-asc">{{ __('pages.price_asc') }}</option>
+                <option value="price-desc">{{ __('pages.price_desc') }}</option>
             </select>
         </label>
     </div>
